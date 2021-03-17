@@ -48,7 +48,7 @@ public class UserRegistration {
             System.out.println("The Phone Number you entered is Invalid");
     }
 
-    public  static void password() {
+    public static void password() {
         Scanner scan = new Scanner(System.in);
         String passwordExp = "[a-zA-Z0-9]{8,}";
         System.out.print("Please enter your Password of choice: ");
