@@ -6,7 +6,7 @@ public class UserRegistration {
     public static void firstName() {
         Scanner scan = new Scanner(System.in);
         String firstNameExp = "^[A-Z]{1}+[a-z]{2,}";
-        System.out.print("Please enter you first name: ");
+        System.out.print("Please enter your first name: ");
         String fname = scan.next();
         if(Pattern.matches(firstNameExp, fname))
             System.out.println("First Name you Entered is Valid");
@@ -17,7 +17,7 @@ public class UserRegistration {
     public static void lastName() {
         Scanner scan = new Scanner(System.in);
         String lastNameExp = "^[A-Z]{1}+[a-z]{2,}";
-        System.out.print("Please enter you last name: ");
+        System.out.print("Please enter your last name: ");
         String lname = scan.next();
         if(Pattern.matches(lastNameExp, lname))
             System.out.println("Last Name you Entered is Valid");
@@ -28,7 +28,7 @@ public class UserRegistration {
     public static void email() {
         Scanner scan = new Scanner(System.in);
         String emailExp = "^[a-zA-Z0-9]+([.+_-]{0,1}+[a-zA-Z0-9])*+[@]+[a-zA-Z]+[.]+[a-zA-Z]{2,4}+([.]{1}+[a-zA-Z]{0,2})*";
-        System.out.print("Please enter you Email: ");
+        System.out.print("Please enter your Email: ");
         String email = scan.next();
         if(Pattern.matches(emailExp, email))
             System.out.println("The Email ID you Entered is Valid");
@@ -39,7 +39,7 @@ public class UserRegistration {
     public static void mobNum() {
         Scanner scan = new Scanner(System.in);
         String phoneExp = "[0-9]{2}\\s[0-9]{10}";
-        System.out.print("Please enter you Phone Number: ");
+        System.out.print("Please enter your Phone Number: ");
         String phone = scan.nextLine();
         System.out.println(phone);
         if(Pattern.matches(phoneExp, phone))
@@ -48,11 +48,23 @@ public class UserRegistration {
             System.out.println("The Phone Number you entered is Invalid");
     }
 
+    public  static void password() {
+        Scanner scan = new Scanner(System.in);
+        String passwordExp = "[a-zA-Z0-9]{8,}";
+        System.out.print("Please enter your Password of choice: ");
+        String password = scan.nextLine();
+        System.out.println(password);
+        if(Pattern.matches(passwordExp, password))
+            System.out.println("The Password you Entered is Valid");
+        else
+            System.out.println("The Password you entered is Invalid");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Program");
         firstName();
         lastName();
         email();
         mobNum();
+        password();
     }
 }
