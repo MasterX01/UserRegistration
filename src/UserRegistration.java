@@ -7,25 +7,39 @@ public class UserRegistration {
         Scanner scan = new Scanner(System.in);
         String firstNameExp = "^[A-Z]{1}+[a-z]{2,}";
         System.out.print("Please enter you first name: ");
-        String name = scan.next();
-        if(Pattern.matches(firstNameExp, name))
+        String fname = scan.next();
+        if(Pattern.matches(firstNameExp, fname))
             System.out.println("First Name you Entered is Valid");
         else
             System.out.println("First Name you entered is Invalid");
     }
+
     public static void lastName() {
         Scanner scan = new Scanner(System.in);
         String lastNameExp = "^[A-Z]{1}+[a-z]{2,}";
         System.out.print("Please enter you last name: ");
-        String name = scan.next();
-        if(Pattern.matches(lastNameExp, name))
+        String lname = scan.next();
+        if(Pattern.matches(lastNameExp, lname))
             System.out.println("Last Name you Entered is Valid");
         else
             System.out.println("Last Name you entered is Invalid");
     }
+
+    public static void email() {
+        Scanner scan = new Scanner(System.in);
+        String emailExp = "^[a-zA-Z0-9]+([.+_-]{0,1}+[a-zA-Z0-9])*+[@]+[a-zA-Z]+[.]+[a-zA-Z]{2,4}+([.]{1}+[a-zA-Z]{0,2})*";
+        System.out.print("Please enter you Email: ");
+        String email = scan.next();
+        if(Pattern.matches(emailExp, email))
+            System.out.println("The Email ID you Entered is Valid");
+        else
+            System.out.println("The Email ID you entered is Invalid");
+    }
+
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Program");
         firstName();
         lastName();
+        email();
     }
 }
