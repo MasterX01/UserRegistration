@@ -50,7 +50,7 @@ public class UserRegistration {
 
     public static void password() {
         Scanner scan = new Scanner(System.in);
-        String passwordExp = "[a-zA-Z0-9]{8,}";
+        String passwordExp = "^.*(?=.*[A-Z])([a-z0-9])(?=.{8,}).*$";
         System.out.print("Please enter your Password of choice: ");
         String password = scan.nextLine();
         System.out.println(password);
@@ -61,10 +61,10 @@ public class UserRegistration {
     }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Program");
-        firstName();
-        lastName();
-        email();
-        mobNum();
+//        firstName();
+//        lastName();
+//        email();
+//        mobNum();
         password();
     }
 }
