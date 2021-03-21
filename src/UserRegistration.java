@@ -62,7 +62,7 @@ public class UserRegistration {
     }
 
     public static void validateEmail(ArrayList<String> emails) {
-        String emailExp = "^[a-zA-Z0-9]*+([.+_-]{0,1}+[a-zA-Z0-9])*+@+[a-zA-Z]+.+([a-zA-Z]{2,4})+.+([a-zA-Z]{0,2}){0,1}$";
+        String emailExp = "^[a-zA-Z0-9]+([.+_-]{0,1}+[a-zA-Z0-9])*+@+[a-zA-Z0-9]+.+([a-zA-Z]{2,4})+([.]{1}+[a-zA-Z]{0,2})*$";
         for (String mail : emails) {
             if (Pattern.matches(emailExp, mail))
                 System.out.println("The Email ID: " + mail + " is Valid");
